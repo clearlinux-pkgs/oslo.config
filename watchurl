@@ -1,0 +1,4 @@
+# openstack (Kilo stable) needs version >=1.9.3,<1.10.0
+# once we move > kilo, we can push >=1.10.0
+# check https://github.com/openstack/requirements/blob/master/global-requirements.txt
+watchurl=http://tarballs.openstack.org/oslo.config/oslo.config-(1.9.[\d.]*).tar.gz.*

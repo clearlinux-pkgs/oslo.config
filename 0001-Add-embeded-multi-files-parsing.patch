@@ -1,0 +1,66 @@
+From 4c21f1ccf149e21632cb09dc234234cf2eb6a6ca Mon Sep 17 00:00:00 2001
+From: "Munoz, Obed N" <obed.n.munoz@intel.com>
+Date: Thu, 23 Apr 2015 17:42:31 -0500
+Subject: [PATCH] Add embeded multi-files parsing
+
+Signed-off-by: Munoz, Obed N <obed.n.munoz@intel.com>
+---
+ oslo_config/cfg.py | 17 +++++++++++++----
+ 1 file changed, 13 insertions(+), 4 deletions(-)
+
+diff --git a/oslo_config/cfg.py b/oslo_config/cfg.py
+index 77fd44d..b6030d2 100644
+--- a/oslo_config/cfg.py
++++ b/oslo_config/cfg.py
+@@ -494,6 +494,7 @@ def _get_config_dirs(project=None):
+     cfg_dirs = [
+         _fixpath(os.path.join('~', '.' + project)) if project else None,
+         _fixpath('~'),
++        os.path.join('/usr/share/defaults', project) if project else None,
+         os.path.join('/etc', project) if project else None,
+         '/etc'
+     ]
+@@ -512,10 +513,13 @@ def _search_dirs(dirs, basename, extension=""):
+     :param extension: the file extension, for example '.conf'
+     :returns: the path to a matching file, or None
+     """
++    paths = []
+     for d in dirs:
+         path = os.path.join(d, '%s%s' % (basename, extension))
+         if os.path.exists(path):
+-            return path
++            paths.append(path)
++
++    return paths
+ 
+ 
+ def find_config_files(project=None, prog=None, extension='.conf'):
+@@ -549,9 +553,10 @@ def find_config_files(project=None, prog=None, extension='.conf'):
+     cfg_dirs = _get_config_dirs(project)
+ 
+     config_files = []
++
+     if project:
+-        config_files.append(_search_dirs(cfg_dirs, project, extension))
+-    config_files.append(_search_dirs(cfg_dirs, prog, extension))
++        config_files += _search_dirs(cfg_dirs, project, extension)
++    config_files += _search_dirs(cfg_dirs, prog, extension)
+ 
+     return list(moves.filter(bool, config_files))
+ 
+@@ -2158,7 +2163,11 @@ class ConfigOpts(collections.Mapping):
+ 
+         dirs.extend(_get_config_dirs(self.project))
+ 
+-        return _search_dirs(dirs, name)
++        found_files = set(_search_dirs(dirs, name))
++
++        if len(found_files):
++            return found_files.pop()
++        return None
+ 
+     def log_opt_values(self, logger, lvl):
+         """Log the value of all registered opts.
+-- 
+2.3.6
+
