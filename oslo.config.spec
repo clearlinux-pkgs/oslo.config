@@ -4,7 +4,7 @@
 #
 Name     : oslo.config
 Version  : 2.4.0
-Release  : 19
+Release  : 20
 URL      : http://tarballs.openstack.org/oslo.config/oslo.config-2.4.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-2.4.0.tar.gz
 Summary  : Oslo Configuration API
@@ -22,6 +22,7 @@ BuildRequires : docutils-python
 BuildRequires : extras
 BuildRequires : fixtures-python
 BuildRequires : flake8
+BuildRequires : funcsigs-python
 BuildRequires : hacking
 BuildRequires : linecache2-python
 BuildRequires : markupsafe-python
@@ -74,6 +75,8 @@ bin components for the oslo.config package.
 %package python
 Summary: python components for the oslo.config package.
 Group: Default
+Requires: netaddr-python
+Requires: six-python
 
 %description python
 python components for the oslo.config package.
