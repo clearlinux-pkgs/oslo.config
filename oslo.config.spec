@@ -4,7 +4,7 @@
 #
 Name     : oslo.config
 Version  : 2.4.0
-Release  : 20
+Release  : 21
 URL      : http://tarballs.openstack.org/oslo.config/oslo.config-2.4.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-2.4.0.tar.gz
 Summary  : Oslo Configuration API
