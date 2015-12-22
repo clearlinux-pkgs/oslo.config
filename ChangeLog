@@ -1,11 +1,27 @@
 CHANGES
 =======
 
+3.2.0
+-----
+
+* Capitalize IP
+* Add support for a deprecation reason
+* Clarify option types documentation
+* Correct warnings during doc build
+* Remove warning for option type not a ConfigType
+* Removes MANIFEST.in as it is not needed explicitely by PBR
+* Correct the docstring parameters for PortOpt
+* Make PortOpt accept choices parameter
+* Test equality of types.String choices as a set
+* Add new parameter `choices` to Integer type
+
 3.1.0
 -----
 
 * [fix-compat] Tolerate non-string defaults in String type
 * [fix-compat] Support older use case for Opt type
+* Handle None section name in MultiOptConfigParser#get
+* Update the list_opts documentation for new api
 * Remove duplicated profiles section from bandit.yaml
 * Revert "Add 'mutable' param to Opt"
 * Drop python 2.6 support
