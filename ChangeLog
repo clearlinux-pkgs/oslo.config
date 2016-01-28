@@ -1,6 +1,42 @@
 CHANGES
 =======
 
+3.4.0
+-----
+
+* Do not fail on certain config option help strings
+* Updated from global requirements
+* enhance sphinx integration to allow links to option definitions
+
+3.3.0
+-----
+
+* Remove argparse from requirements
+* Updated from global requirements
+* replace reference to default value in option help text in docs
+* add built-in options to auto-generated documentation
+* register the built-in options for the config generator to find
+* Add reST work label for configuration options
+* Allow port number with 0
+* Replace deprecated library function os.popen() with subprocess
+* Fix can't generate config sample with non-None value
+
+3.2.1
+-----
+
+* Fixed deprecated_for_removal warning generation
+* Module index grouping
+* Docs class links
+* generator: ignore doubles
+* Numerous corrections to the docstrings
+* Make oslo-config-generator fail gracefully when no arguments
+* Replace assertEqual(*, None) with assertIsNone in tests
+* Python 3 deprecated the logger.warn method in favor of warning
+* Replace assertEqual(None,*) with assertIsNone(*)
+* Cleanly handle an undefined attribute reference
+* Replace assertEqual with assertTrue and assertFalse
+* assertIsNone(val) instead of assertEqual(None,val)
+
 3.2.0
 -----
 
