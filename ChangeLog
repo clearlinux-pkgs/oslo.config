@@ -1,10 +1,29 @@
 CHANGES
 =======
 
+3.5.0
+-----
+
+* Fix unrecognized subparser args
+* Add test for BoolOpt with no default
+* Fix bandit entry in tox.ini
+* Removal of bandit.yaml
+* Fix version 'mutable' was added
+* Fix PortOpt versionchanged
+* treat option group names as section headers when documenting them
+* Fix MultiConfigParser removal version
+* Retain correct order of defined config options
+
 3.4.0
 -----
 
 * Do not fail on certain config option help strings
+* Make list_all_sections return a list
+* Report mutated options
+* Warn if immutable options change
+* Add 'mutable' param to Opt
+* Fake attrs on _Namespace
+* Make _Namespace the value-holder
 * Updated from global requirements
 * enhance sphinx integration to allow links to option definitions
 
