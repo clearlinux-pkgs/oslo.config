@@ -1,6 +1,14 @@
 CHANGES
 =======
 
+3.6.0
+-----
+
+* Add debtcollector as requirement
+* support multiple namespaces in sphinxext
+* refactor sphinxext to make reformatting easier
+* Updated from global requirements
+
 3.5.0
 -----
 
