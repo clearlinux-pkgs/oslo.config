@@ -4,7 +4,7 @@
 #
 Name     : oslo.config
 Version  : 3.6.0
-Release  : 30
+Release  : 31
 URL      : http://tarballs.openstack.org/oslo.config/oslo.config-3.6.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-3.6.0.tar.gz
 Summary  : Oslo Configuration API
