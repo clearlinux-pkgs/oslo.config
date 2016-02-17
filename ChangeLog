@@ -1,13 +1,26 @@
 CHANGES
 =======
 
+3.7.0
+-----
+
+* add generator hook for apps to update option defaults
+* Updated from global requirements
+* refactor generator._list_opts for further enhancement
+
 3.6.0
 -----
 
 * Add debtcollector as requirement
+* always show coverage output from tests
+* handle group objects in sphinxext
+* refactor sphinxext and add unit tests
+* have show-options load the generator config file
 * support multiple namespaces in sphinxext
 * refactor sphinxext to make reformatting easier
+* refactor generator closures to private methods
 * Updated from global requirements
+* remove specially attribute handling from _Namespace
 
 3.5.0
 -----
@@ -16,6 +29,7 @@ CHANGES
 * Add test for BoolOpt with no default
 * Fix bandit entry in tox.ini
 * Removal of bandit.yaml
+* Log mutated options at INFO
 * Fix version 'mutable' was added
 * Fix PortOpt versionchanged
 * treat option group names as section headers when documenting them
