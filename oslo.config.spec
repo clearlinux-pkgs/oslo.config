@@ -4,7 +4,7 @@
 #
 Name     : oslo.config
 Version  : 3.7.0
-Release  : 32
+Release  : 33
 URL      : http://tarballs.openstack.org/oslo.config/oslo.config-3.7.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-3.7.0.tar.gz
 Summary  : Oslo Configuration API
@@ -59,6 +59,7 @@ BuildRequires : traceback2-python
 BuildRequires : unittest2-python
 BuildRequires : virtualenv
 Patch1: 0001-Add-embeded-multi-files-parsing.patch
+Patch2: 0001-stateless.patch
 
 %description
 ==========================
@@ -87,6 +88,7 @@ python components for the oslo.config package.
 %prep
 %setup -q -n oslo.config-3.7.0
 %patch1 -p1
+%patch2 -p1
 
 %build
 python2 setup.py build -b py2
