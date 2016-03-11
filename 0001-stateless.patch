@@ -1,18 +1,17 @@
-From 0310796e1572131dc856caa2a58382f85f7989e1 Mon Sep 17 00:00:00 2001
+From e09e5a40a86826af7aeeaa926a44f09334b2f708 Mon Sep 17 00:00:00 2001
 From: Alberto Murillo <alberto.murillo.silva@intel.com>
-Date: Wed, 2 Mar 2016 11:47:36 -0600
+Date: Fri, 11 Mar 2016 15:54:53 -0600
 Subject: [PATCH] stateless
 
-Do not die when --config-dir parameter is non existent.
 ---
  oslo_config/cfg.py | 5 ++---
  1 file changed, 2 insertions(+), 3 deletions(-)
 
 diff --git a/oslo_config/cfg.py b/oslo_config/cfg.py
-index 756a594..d5e00f0 100644
+index fc4274f..b38e429 100644
 --- a/oslo_config/cfg.py
 +++ b/oslo_config/cfg.py
-@@ -1440,15 +1440,14 @@ class _ConfigDirOpt(Opt):
+@@ -1460,8 +1460,7 @@ class _ConfigDirOpt(Opt):
          def __call__(self, parser, namespace, values, option_string=None):
              """Handle a --config-dir command line argument.
  
@@ -20,8 +19,9 @@ index 756a594..d5e00f0 100644
 -                     ConfigDirNotFoundError
 +            :raises: ConfigFileParseError, ConfigFileValueError
              """
+             namespace._config_dirs.append(values)
              setattr(namespace, self.dest, values)
- 
+@@ -1469,7 +1468,7 @@ class _ConfigDirOpt(Opt):
              values = os.path.expanduser(values)
  
              if not os.path.exists(values):

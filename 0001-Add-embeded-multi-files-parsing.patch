@@ -1,4 +1,4 @@
-From 4c21f1ccf149e21632cb09dc234234cf2eb6a6ca Mon Sep 17 00:00:00 2001
+From 41dd0d93b25839f2655e935c55135089f062d13f Mon Sep 17 00:00:00 2001
 From: "Munoz, Obed N" <obed.n.munoz@intel.com>
 Date: Thu, 23 Apr 2015 17:42:31 -0500
 Subject: [PATCH] Add embeded multi-files parsing
@@ -9,10 +9,10 @@ Signed-off-by: Munoz, Obed N <obed.n.munoz@intel.com>
  1 file changed, 13 insertions(+), 4 deletions(-)
 
 diff --git a/oslo_config/cfg.py b/oslo_config/cfg.py
-index 77fd44d..b6030d2 100644
+index 2c0391e..fc4274f 100644
 --- a/oslo_config/cfg.py
 +++ b/oslo_config/cfg.py
-@@ -494,6 +494,7 @@ def _get_config_dirs(project=None):
+@@ -539,6 +539,7 @@ def _get_config_dirs(project=None):
      cfg_dirs = [
          _fixpath(os.path.join('~', '.' + project)) if project else None,
          _fixpath('~'),
@@ -20,7 +20,7 @@ index 77fd44d..b6030d2 100644
          os.path.join('/etc', project) if project else None,
          '/etc'
      ]
-@@ -512,10 +513,13 @@ def _search_dirs(dirs, basename, extension=""):
+@@ -557,10 +558,13 @@ def _search_dirs(dirs, basename, extension=""):
      :param extension: the file extension, for example '.conf'
      :returns: the path to a matching file, or None
      """
@@ -35,7 +35,7 @@ index 77fd44d..b6030d2 100644
  
  
  def find_config_files(project=None, prog=None, extension='.conf'):
-@@ -549,9 +553,10 @@ def find_config_files(project=None, prog=None, extension='.conf'):
+@@ -594,9 +598,10 @@ def find_config_files(project=None, prog=None, extension='.conf'):
      cfg_dirs = _get_config_dirs(project)
  
      config_files = []
@@ -48,7 +48,7 @@ index 77fd44d..b6030d2 100644
  
      return list(moves.filter(bool, config_files))
  
-@@ -2158,7 +2163,11 @@ class ConfigOpts(collections.Mapping):
+@@ -2487,7 +2492,11 @@ class ConfigOpts(collections.Mapping):
  
          dirs.extend(_get_config_dirs(self.project))
  
@@ -62,5 +62,5 @@ index 77fd44d..b6030d2 100644
      def log_opt_values(self, logger, lvl):
          """Log the value of all registered opts.
 -- 
-2.3.6
+2.5.0
 

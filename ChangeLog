@@ -1,6 +1,26 @@
 CHANGES
 =======
 
+3.9.0
+-----
+
+* remove redundant call to set explicit target
+* clear the cache before mutating the config files
+* Updated from global requirements
+* Add None-check to find_file
+* add support for mutable options in the config generator
+* add unreleased page to release notes build
+* add a release note mentioning our use of reno
+* Add reno for release notes management
+
+3.8.0
+-----
+
+* Hooks around mutate_config_files
+* Add hostname config type
+* Add config_dirs property with a list of directories
+* Fix wrong check with non-None value when format group
+
 3.7.0
 -----
 
