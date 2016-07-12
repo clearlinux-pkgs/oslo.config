@@ -1,6 +1,60 @@
 CHANGES
 =======
 
+3.12.0
+------
+
+* Add URIOpt
+* Add support for a deprecated version
+* Updated from global requirements
+* Support template substitution of DictOpt
+* fixture: Provide parameter enforce_type for method config
+
+3.11.0
+------
+
+* Fix typo: 'olso' to 'oslo'
+* Return [] for .config_dirs when config files are not parsed
+* generator: format string default value for List type properly
+* Updated from global requirements
+* Required Option
+* Updated from global requirements
+* Make sure ConfigType is an abstract class
+* Added i18n formatting to log messages
+* Remove duplicated code in method test_equal of HostnameTypeTests
+* Incorrect group name when deprecated_group is not specified
+* Handle some native python types in config generation
+
+3.10.0
+------
+
+* sphinxconfiggen to generate multiple sample files
+* Fix typo in sphinxconfiggen docs
+* Updated from global requirements
+* fix wrong module name sphinxgenconfig in doc
+* Update Beta development status from classifiers
+* Add 'DEPRECATED: ' prefix for deprecated opts
+* Avoid duplicate sections in generator output
+* Updated from global requirements
+* Updated from global requirements
+* Add * to .coverage in .gitignore
+* Add enfore_type parameter for set_default,
+* Don't set html_last_updated_fmt without git
+* Updated from global requirements
+* Updated from global requirements
+* cfg: do not add --version if not version provided
+* Disallow config option name as same as attribute of ConfigOpts
+* doc:Log warning when can't get information from git
+* Explicitly exclude tests from bandit scan
+* Fix typo error in docstrings of oslo_config.cfg.py
+* improve documentation about registering entry points for config generator
+* Fix isinstance call
+* Replace deprecated LOG.warn with LOG.warning
+* Update reno for stable/mitaka
+* Fallback if git is absent
+* Move bandit into pep8
+* Cleanup open file handles in test cases
+
 3.9.0
 -----
 
