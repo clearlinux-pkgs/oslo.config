@@ -1,6 +1,16 @@
 CHANGES
 =======
 
+3.13.0
+------
+
+* Add Python 3.5 classifier and venv
+* Enabling your project for mutable-config
+* Add namespace to _list_opts() in test
+* decode subprocess output so doc build works on python3
+* Updated from global requirements
+* Updated from global requirements
+
 3.12.0
 ------
 
