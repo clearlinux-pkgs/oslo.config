@@ -1,6 +1,20 @@
 CHANGES
 =======
 
+3.14.0
+------
+
+* disable lazy translation in sphinx extension
+* Trivial: adjust import order to fit the import order guideline
+* Make error message more clear
+* Add min and max values to Float type and Opt
+* Fix parameters of assertEqual are misplaced
+* Updated from global requirements
+* Add max_length to URIOpt
+* Remove discover from test-requirements
+* update docs for sphinxconfiggen
+* Add URIOpt to doced option types
+
 3.13.0
 ------
 
