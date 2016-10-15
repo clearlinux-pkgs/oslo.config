@@ -1,6 +1,23 @@
 CHANGES
 =======
 
+3.17.0
+------
+
+* Updated from global requirements
+
+3.16.0
+------
+
+* Fix: default value of prog should remove extension
+* Add Port type to allow configuration of a list of tcp/ip ports
+
+3.15.0
+------
+
+* Advanced Option
+* Add set_override method test with ListOpt
+
 3.14.0
 ------
 
