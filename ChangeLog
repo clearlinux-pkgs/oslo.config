@@ -1,6 +1,34 @@
 CHANGES
 =======
 
+3.18.0
+------
+
+* Fix wrong usage of DuplicateOptError
+* Enable release notes translation
+* Updated from global requirements
+* Disable warning for missing oslo.config.opts.defaults
+* Updated from global requirements
+* Updated from global requirements
+* Add doc about config option name and comment in config file
+* modify the home-page info with the developer documentation
+* Correct nits in Iedf808
+* Updated from global requirements
+* Fix missing option types to config doc
+* Add 'schemes' argument to URIOpt
+* Fix repr for tuples in choices
+* Add some documentation about option deprecation
+* test: add enforce_type test
+* standardize release note page ordering
+* Warn user about enforce_type default change
+* Ensure test_config_dir_doesnt_exist() dir doesn't exist
+* Update reno for stable/newton
+* Add HostnameOpt and URIOpt types to sphinxext
+* Add missing exceptions to the documentation
+* Add IPOpt and PortOpt names for sphinxext
+* Updated from global requirements
+* Add Range type
+
 3.17.0
 ------
 
