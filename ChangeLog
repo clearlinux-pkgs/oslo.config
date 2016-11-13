@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+3.19.0
+------
+
+* Fixup list types handling tuples
+* Updated from global requirements
+* [TrivialFix] Replace 'assertTrue(a in b)' with 'assertIn(a, b)'
+
 3.18.0
 ------
 
