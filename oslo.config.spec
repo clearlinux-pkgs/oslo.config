@@ -6,7 +6,7 @@
 #
 Name     : oslo.config
 Version  : 3.19.0
-Release  : 47
+Release  : 48
 URL      : http://tarballs.openstack.org/oslo.config/oslo.config-3.19.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-3.19.0.tar.gz
 Source99 : http://tarballs.openstack.org/oslo.config/oslo.config-3.19.0.tar.gz.asc
@@ -21,52 +21,11 @@ Requires: oslo.i18n
 Requires: rfc3986
 Requires: six
 Requires: stevedore
-BuildRequires : Babel-python
-BuildRequires : Jinja2
-BuildRequires : Pygments
-BuildRequires : Sphinx-python
-BuildRequires : configparser-python
-BuildRequires : coverage-python
-BuildRequires : discover-python
-BuildRequires : docutils-python
-BuildRequires : extras
-BuildRequires : fixtures-python
-BuildRequires : flake8
-BuildRequires : hacking
-BuildRequires : linecache2-python
-BuildRequires : markupsafe-python
-BuildRequires : mccabe-python
-BuildRequires : mox3-python
-BuildRequires : netaddr-python
-BuildRequires : oslo.i18n-python
-BuildRequires : oslosphinx-python
-BuildRequires : oslotest-python
 BuildRequires : pbr
-BuildRequires : pep8
 BuildRequires : pip
-BuildRequires : pluggy
-BuildRequires : py-python
-BuildRequires : pyflakes-python
-BuildRequires : pytest
 BuildRequires : python-dev
-BuildRequires : python-mimeparse-python
-BuildRequires : python-mock
-BuildRequires : python-subunit
 BuildRequires : python3-dev
-BuildRequires : pytz-python
-BuildRequires : requests-python
-BuildRequires : rfc3986-python
 BuildRequires : setuptools
-BuildRequires : six
-BuildRequires : six-python
-BuildRequires : stevedore
-BuildRequires : testrepository-python
-BuildRequires : testscenarios
-BuildRequires : testtools
-BuildRequires : tox
-BuildRequires : traceback2-python
-BuildRequires : unittest2-python
-BuildRequires : virtualenv
 Patch1: 0001-Add-embeded-multi-files-parsing.patch
 Patch2: 0001-stateless.patch
 
@@ -98,17 +57,12 @@ python components for the oslo.config package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489031378
+export SOURCE_DATE_EPOCH=1489273068
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
-export SOURCE_DATE_EPOCH=1489031378
+export SOURCE_DATE_EPOCH=1489273068
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
