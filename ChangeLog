@@ -1,6 +1,293 @@
 CHANGES
 =======
 
+6.4.0
+-----
+
+* New cache layer for external sources
+* ensure we do not modify private data from drivers
+* User guide documentation for backend drivers for oslo.config
+* add detail to driver options in config generator
+
+6.3.0
+-----
+
+* move configuration option list to the configuration guide
+* Add example group for the URI driver
+* Add config\_source option
+* Optionally use oslo.log for deprecated opt logging
+
+6.2.2
+-----
+
+* Add release notes link to README
+* tox: Fix typo
+* sphinxext: Reporting correct lines for errors
+* sphinxext: Address nits from Ic6c2dcbe7823dd3fdc71db8dc5afab2d604559e3
+* improve the documentation for option location information
+* fix tox python3 overrides
+* Create INI file ConfigurationSourceDriver
+* ConfigurationSource base class
+* Base class for a configuration driver
+* fix lower-constraints
+
+6.2.1
+-----
+
+* Properly initialize HostAddress
+* Remove stale pip-missing-reqs tox test
+* Remove boolean from StrOpt example
+
+6.2.0
+-----
+
+* Trivial: Update pypi url to new url
+* fix URI type equality comparison
+* Fix HostAddress superclass
+* use environment variable to control file location probing
+* sphinxext: Use 'sphinx.util.logging'
+
+6.1.0
+-----
+
+* set default python to python3
+* Switch pep8 job to python 3
+* Make List option format bounds-sensitive
+
+6.0.2
+-----
+
+* Fix typo 'importopt' to 'import\_opt' adding the missing \_
+
+6.0.1
+-----
+
+* disable stack inspection when setting option values
+* ignore location when comparing options for duplicate registration
+
+6.0.0
+-----
+
+* Support trailing commas in values of list type
+* add a job to run unit tests against the lower bounds of our dependencies
+* Clean old output before new doc builds
+* Follow the new PTI for document build
+* Remove MultiConfigParser
+* sphinxext: Start parsing 'Opt.help' as rST
+* sphinxext: Separate parsing of group and opts
+* Add bindep.txt file to prevent fallback to generic list
+* add user documentation for get\_location()
+* track config file and command line locations for user settings
+* Updated from global requirements
+* Update links in README
+* trivial change to contributing instructions
+* add source filename to option locations set in code
+* report the correct location for an option updated with set\_defaults()
+* track the location where configuration options are set
+* Update reno for stable/queens
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+* Updated from global requirements
+
+5.2.0
+-----
+
+* Fix the invalid links for doc file in oslo.config
+* sphinxext: Don't sometimes emit trailing newlines
+* Provide descriptions for choices
+* Remove -U from pip install
+* Avoid tox\_install.sh for constraints support
+* Clean up enforce\_type related test method's name
+
+5.1.0
+-----
+
+* Remove setting of version/release from releasenotes
+* Updated from global requirements
+* Make help message include choices information for StrOpt
+
+5.0.0
+-----
+
+* Remove the parameter enforce\_type from set\_override and set\_default
+* Correct documentation error in DeprecatedOpt
+
+4.13.2
+------
+
+* Prefer SNAP\_COMMON config files
+
+4.13.1
+------
+
+* Implement OptGroup.\_\_str\_\_ for log messages
+* Cleanup test-requirements
+
+4.13.0
+------
+
+* Updated from global requirements
+* Use boolean where expected
+* Fix sphinx option generation when advanced=True
+* Updated from global requirements
+
+4.12.0
+------
+
+* Remove redundant colon in doc
+* Updated from global requirements
+* Update reno for stable/pike
+* Updated from global requirements
+* Empty groupname will be 'DEFAULT' by default
+* Added exception when namespace option is missing
+* Fix the incorrect file path
+
+4.11.0
+------
+
+* add rst output mode for config generator
+* fix formatting of literal default values with spaces
+
+4.10.0
+------
+
+* fix an issue with looking up deprecated option names in code
+* handle option defaults that are not strings
+* Fix python 3.6 escape char warnings in strings
+
+4.9.0
+-----
+
+* Update URLs in documents according to document migration
+
+4.8.0
+-----
+
+* doc: Specify openstackdocs theme
+* Updated from global requirements
+* Remove log translations
+* sphinxext: Use lower logging level
+* sphinxext: Add arguments for oslo.config:group directive
+* switch from oslosphinx to openstackdocstheme
+* import content from the configuration reference guide
+* update the documentation URL in the readme
+
+4.7.0
+-----
+
+* rearrange docs based on new standard layout
+* Updated from global requirements
+* Enable some off-by-default checks
+
+4.6.0
+-----
+
+* add to group data model to for generator
+* Add snap package paths to default config dirs
+* Updated from global requirements
+* Fix html\_last\_updated\_fmt for Python3
+
+4.5.0
+-----
+
+* Don't set enforce\_type if we are using the default
+
+4.4.0
+-----
+
+* Rework the 'oslo-config-generator' documentation
+* sphinxext: Log with 'str', not 'repr'
+* Fix html\_last\_updated\_fmt for Python3
+* Cast generator\_options to dict
+* Add PyYAML as a requirement
+
+4.3.0
+-----
+
+* Updated from global requirements
+* Machine Readable Sample Config
+
+4.2.0
+-----
+
+* Remove dependency oslo.i18n from test-requirements.txt
+* Updated from global requirements
+* Updated from global requirements
+
+4.1.1
+-----
+
+* Updated from global requirements
+* Handle multi-line default values in olso-config-generator
+* Clarify info on a comment
+
+4.1.0
+-----
+
+* add deprecation\_reason to log message
+
+4.0.0
+-----
+
+* Fix string interpolation in ValueError
+* Remove usage of enforce\_type=True
+* Adjust removal\_version for argument enforce\_type
+* Optimize the link address
+* Make set\_override/set\_default with enforce\_type=True by default
+
+3.24.0
+------
+
+* sphinxext: Handle unescaped percentage signs
+* Remove log translations
+* Add HACKING.rst
+* Fix conversion to item\_type on \_\_call\_\_ in List type(again)
+* Use Sphinx 1.5 warning-is-error
+
+3.23.0
+------
+
+* Updated from global requirements
+* [Fix gate]Update test requirement
+* Fix up the option docs
+* Handle both - and \_ forms of deprecated opts
+* Handle getattrs to ConfigOpts for deprecated opts
+* Updated from global requirements
+* pbr.version.VersionInfo needs package name (oslo.xyz and not oslo\_xyz)
+* Update reno for stable/ocata
+* Fix typo in generator.rst
+
+3.22.0
+------
+
+* Fix broken links
+* Updated from global requirements
+* Remove references to Python 3.4
+* fix interpolation of None value
+* Normalize group sections
+* config: Pass description and epilog through
+* Add Constraints support
+* Replace six.iteritems() with .items()
+* Fixing HostName and adding support for HostAddress
+
+3.21.0
+------
+
+
+3.20.0
+------
+
+* List comprehensions
+* Add defaults for config-dir
+* Fix filename in comment
+* Show team and repo badges on README
+* Add 'summarize' option
+* Revert "Fix conversion to item\_type on \_\_call\_\_ in List type"
+* Fix conversion to item\_type on \_\_call\_\_ in List type
+* doc: Fix Range type version
+* Updated from global requirements
+
 3.19.0
 ------
 
@@ -25,10 +312,10 @@ CHANGES
 * Add 'schemes' argument to URIOpt
 * Fix repr for tuples in choices
 * Add some documentation about option deprecation
-* test: add enforce_type test
+* test: add enforce\_type test
 * standardize release note page ordering
-* Warn user about enforce_type default change
-* Ensure test_config_dir_doesnt_exist() dir doesn't exist
+* Warn user about enforce\_type default change
+* Ensure test\_config\_dir\_doesnt\_exist() dir doesn't exist
 * Update reno for stable/newton
 * Add HostnameOpt and URIOpt types to sphinxext
 * Add missing exceptions to the documentation
@@ -51,7 +338,7 @@ CHANGES
 ------
 
 * Advanced Option
-* Add set_override method test with ListOpt
+* Add set\_override method test with ListOpt
 
 3.14.0
 ------
@@ -62,7 +349,7 @@ CHANGES
 * Add min and max values to Float type and Opt
 * Fix parameters of assertEqual are misplaced
 * Updated from global requirements
-* Add max_length to URIOpt
+* Add max\_length to URIOpt
 * Remove discover from test-requirements
 * update docs for sphinxconfiggen
 * Add URIOpt to doced option types
@@ -72,7 +359,7 @@ CHANGES
 
 * Add Python 3.5 classifier and venv
 * Enabling your project for mutable-config
-* Add namespace to _list_opts() in test
+* Add namespace to \_list\_opts() in test
 * decode subprocess output so doc build works on python3
 * Updated from global requirements
 * Updated from global requirements
@@ -84,21 +371,21 @@ CHANGES
 * Add support for a deprecated version
 * Updated from global requirements
 * Support template substitution of DictOpt
-* fixture: Provide parameter enforce_type for method config
+* fixture: Provide parameter enforce\_type for method config
 
 3.11.0
 ------
 
 * Fix typo: 'olso' to 'oslo'
-* Return [] for .config_dirs when config files are not parsed
+* Return [] for .config\_dirs when config files are not parsed
 * generator: format string default value for List type properly
 * Updated from global requirements
 * Required Option
 * Updated from global requirements
 * Make sure ConfigType is an abstract class
 * Added i18n formatting to log messages
-* Remove duplicated code in method test_equal of HostnameTypeTests
-* Incorrect group name when deprecated_group is not specified
+* Remove duplicated code in method test\_equal of HostnameTypeTests
+* Incorrect group name when deprecated\_group is not specified
 * Handle some native python types in config generation
 
 3.10.0
@@ -113,16 +400,16 @@ CHANGES
 * Avoid duplicate sections in generator output
 * Updated from global requirements
 * Updated from global requirements
-* Add * to .coverage in .gitignore
-* Add enfore_type parameter for set_default,
-* Don't set html_last_updated_fmt without git
+* Add \* to .coverage in .gitignore
+* Add enfore\_type parameter for set\_default,
+* Don't set html\_last\_updated\_fmt without git
 * Updated from global requirements
 * Updated from global requirements
 * cfg: do not add --version if not version provided
 * Disallow config option name as same as attribute of ConfigOpts
 * doc:Log warning when can't get information from git
 * Explicitly exclude tests from bandit scan
-* Fix typo error in docstrings of oslo_config.cfg.py
+* Fix typo error in docstrings of oslo\_config.cfg.py
 * improve documentation about registering entry points for config generator
 * Fix isinstance call
 * Replace deprecated LOG.warn with LOG.warning
@@ -137,7 +424,7 @@ CHANGES
 * remove redundant call to set explicit target
 * clear the cache before mutating the config files
 * Updated from global requirements
-* Add None-check to find_file
+* Add None-check to find\_file
 * add support for mutable options in the config generator
 * add unreleased page to release notes build
 * add a release note mentioning our use of reno
@@ -146,9 +433,9 @@ CHANGES
 3.8.0
 -----
 
-* Hooks around mutate_config_files
+* Hooks around mutate\_config\_files
 * Add hostname config type
-* Add config_dirs property with a list of directories
+* Add config\_dirs property with a list of directories
 * Fix wrong check with non-None value when format group
 
 3.7.0
@@ -156,7 +443,7 @@ CHANGES
 
 * add generator hook for apps to update option defaults
 * Updated from global requirements
-* refactor generator._list_opts for further enhancement
+* refactor generator.\_list\_opts for further enhancement
 
 3.6.0
 -----
@@ -170,7 +457,7 @@ CHANGES
 * refactor sphinxext to make reformatting easier
 * refactor generator closures to private methods
 * Updated from global requirements
-* remove specially attribute handling from _Namespace
+* remove specially attribute handling from \_Namespace
 
 3.5.0
 -----
@@ -190,12 +477,12 @@ CHANGES
 -----
 
 * Do not fail on certain config option help strings
-* Make list_all_sections return a list
+* Make list\_all\_sections return a list
 * Report mutated options
 * Warn if immutable options change
 * Add 'mutable' param to Opt
-* Fake attrs on _Namespace
-* Make _Namespace the value-holder
+* Fake attrs on \_Namespace
+* Make \_Namespace the value-holder
 * Updated from global requirements
 * enhance sphinx integration to allow links to option definitions
 
@@ -215,15 +502,15 @@ CHANGES
 3.2.1
 -----
 
-* Fixed deprecated_for_removal warning generation
+* Fixed deprecated\_for\_removal warning generation
 * Module index grouping
 * Docs class links
 * generator: ignore doubles
 * Numerous corrections to the docstrings
 * Make oslo-config-generator fail gracefully when no arguments
-* Replace assertEqual(*, None) with assertIsNone in tests
+* Replace assertEqual(\*, None) with assertIsNone in tests
 * Python 3 deprecated the logger.warn method in favor of warning
-* Replace assertEqual(None,*) with assertIsNone(*)
+* Replace assertEqual(None,\*) with assertIsNone(\*)
 * Cleanly handle an undefined attribute reference
 * Replace assertEqual with assertTrue and assertFalse
 * assertIsNone(val) instead of assertEqual(None,val)
@@ -240,7 +527,7 @@ CHANGES
 * Correct the docstring parameters for PortOpt
 * Make PortOpt accept choices parameter
 * Test equality of types.String choices as a set
-* Add new parameter `choices` to Integer type
+* Add new parameter \`choices\` to Integer type
 
 3.1.0
 -----
@@ -248,13 +535,13 @@ CHANGES
 * [fix-compat] Tolerate non-string defaults in String type
 * [fix-compat] Support older use case for Opt type
 * Handle None section name in MultiOptConfigParser#get
-* Update the list_opts documentation for new api
+* Update the list\_opts documentation for new api
 * Remove duplicated profiles section from bandit.yaml
 * Revert "Add 'mutable' param to Opt"
 * Drop python 2.6 support
 * Update docstrings in cfg.py
 * Add 'mutable' param to Opt
-* Allow method set_override with parameter override=None for all types
+* Allow method set\_override with parameter override=None for all types
 
 3.0.0
 -----
@@ -265,7 +552,7 @@ CHANGES
 * Allow naming of custom types
 * Remove python 2.6 classifier
 * improve wording of comment in previous commit
-* Remove 'raise' in _get
+* Remove 'raise' in \_get
 * Remove python 2.6 and cleanup tox.ini
 * Add DEFAULT group in NoSuchOptError when group=None
 * Adjust docstring of module cfg
@@ -295,14 +582,14 @@ CHANGES
 * Case insensitiveness when comparing choices values
 * Add missing tests and generator code for IPOpt
 * Fix coverage configuration and execution
-* Add item_type and bounds to ListOpt
+* Add item\_type and bounds to ListOpt
 * Fix bad exception for StrOpt with invalid choice value
 * fix literal rendering in dictionary options docs
 * Fix home-page value in setup.cfg with Oslo wiki
 * docs - Set pbr 'warnerrors' option for doc build
 * Include changelog/history in docs
 * Document DictOpt class
-* Correct the comment of __call__ method
+* Correct the comment of \_\_call\_\_ method
 * Updated from global requirements
 * Demonstrate that MultiStr values from multiple sources are merged
 
@@ -334,9 +621,9 @@ CHANGES
 2.0.0
 -----
 
-* Add enforce_type option when setting an override
+* Add enforce\_type option when setting an override
 * Updated from global requirements
-* Add *.egg* to .gitignore
+* Add \*.egg\* to .gitignore
 * Updated from global requirements
 * Remove oslo namespace package
 
@@ -353,7 +640,7 @@ CHANGES
 
 * Updated from global requirements
 * Add FAQ entry for why we do not treat config options as API
-* Add set_default() method to fixture
+* Add set\_default() method to fixture
 * fix fixture tests for fixtures 1.3.x
 * Add tox target to find missing requirements
 
@@ -382,11 +669,11 @@ CHANGES
 * Remove outdated release notes
 * cfg: support interpolation of config option from other groups
 * Advertise support for Python3.4 / Remove support for 3.3
-* Do not sync run_cross_tests.sh
+* Do not sync run\_cross\_tests.sh
 * Updated from global requirements
 * Fix issue when generating code with cfg.OptGroup
 * Option name missing from ConfigFileValueError
-* Remove run_cross_tests.sh
+* Remove run\_cross\_tests.sh
 * Enforce alphabetic loading order for --config-dir contents
 
 1.11.0
@@ -402,7 +689,7 @@ CHANGES
 * Add pypi download + version badges
 * Update hacking to kilo level
 * Fix logging of deprecated opts with dest override
-* Add deprecated_for_removal support to the config generator
+* Add deprecated\_for\_removal support to the config generator
 * Generate docs for constructor
 * Fix doc build warning
 * Updated from global requirements
@@ -441,7 +728,7 @@ CHANGES
 -----
 
 * Updated from global requirements
-* Add expose_opt to CfgFilter
+* Add expose\_opt to CfgFilter
 * Log a warning when deprecated opts are used
 * Do not import our namespace package
 * Fixes deprecation warning for oslo.config in cfg.py
@@ -450,7 +737,7 @@ CHANGES
 -----
 
 * Clear up MultiStrOpt and related documentation
-* Add a list_all_sections method to ConfigOpts
+* Add a list\_all\_sections method to ConfigOpts
 * Better check for integer range to account for 0
 * Reword DeprecatedOpt docstring
 * Support i18n messages in config generator
@@ -474,7 +761,7 @@ CHANGES
 * Updated from global requirements
 * Fix class constant indentation
 * Updated from global requirements
-* Activate pep8 check that _ is imported
+* Activate pep8 check that \_ is imported
 * Updated from global requirements
 * Updated from global requirements
 * Add pbr to installation requirements
@@ -492,7 +779,7 @@ CHANGES
 -----
 
 * Looks for variable subtitution in the same group
-* Fixed typo in docstring for _get_config_dirs
+* Fixed typo in docstring for \_get\_config\_dirs
 * Update contributing instructions
 
 1.4.0.0a4
@@ -523,11 +810,11 @@ CHANGES
 * Replaced 'e.g.' with 'for example'
 * Add cfgfilter.ConfigFilter
 * generator: remove the default sanitizer feature
-* cfg,generator: add Opt.sample_default attribute
+* cfg,generator: add Opt.sample\_default attribute
 * generator: refactor MultiStrOpt handling
 * Fix flaws in methods' docstring
 * Introduce Opts for IP addresses
-* Refactors _Namespace to make the code clearer
+* Refactors \_Namespace to make the code clearer
 * Add oslo-config-generator
 * Add CLI option support to config fixture
 
@@ -544,14 +831,14 @@ CHANGES
 * Updated from global requirements
 * Add a doc sample for how to use the required field
 * log: string format arguments changed to function parameters
-* Fix deprecated_opts for cli options
-* Reject option names prefixed with '_'
+* Fix deprecated\_opts for cli options
+* Reject option names prefixed with '\_'
 * Graduate config fixture
 * Updated from global requirements
-* Fix test_version on Python 3.4
+* Fix test\_version on Python 3.4
 * Add section titles and fix markup of docstring
-* Avoid using too generic names in _Namespace
-* Import run_cross_tests.sh from oslo-incubator
+* Avoid using too generic names in \_Namespace
+* Import run\_cross\_tests.sh from oslo-incubator
 * Move py33 env before py2x
 
 1.3.0
@@ -561,7 +848,7 @@ CHANGES
 * Do substitution on overrides and defaults too
 * Follow style guide for help strings
 * Updated from global requirements
-* Fix docstring for _Namespace._get_cli_value
+* Fix docstring for \_Namespace.\_get\_cli\_value
 * Convert to oslo.test
 * Fix a whitespace in a comment
 * Fix docstring of parsing order
@@ -594,7 +881,7 @@ CHANGES
 1.2.1
 -----
 
-* Fix subparsers add_parser() regression
+* Fix subparsers add\_parser() regression
 * Expand DeprecatedOpt documentation
 
 1.2.0
@@ -610,7 +897,7 @@ CHANGES
 1.2.0a4
 -------
 
-* Fix first param in  __eq__ impl to be self
+* Fix first param in  \_\_eq\_\_ impl to be self
 * Bump hacking to 0.7.0
 * Add auto-create support for OptGroup instances
 * NoSuchOptError should be used not AttributeError
@@ -619,7 +906,7 @@ CHANGES
 * Allow use of hacking 0.6.0 and fix min version
 * Add eclipse project files to .gitignore
 * Add Python 3 support
-* Raise an exception when _oparser is not initialized
+* Raise an exception when \_oparser is not initialized
 * Hook docstrings into the published docs
 * Use oslo.sphinx and remove local copy of doc theme
 
@@ -628,12 +915,12 @@ CHANGES
 
 * Add release notes for 1.2.0a3
 * Ensure namespace package is installed
-* Add reload_config_files function
-* Modify __clear_cache function
+* Add reload\_config\_files function
+* Modify \_\_clear\_cache function
 * Use assertEqual() rather than assertEquals()
 * python3: Fix traceback while running tests
 * Tar up .testr.conf as well
-* Rename tools/(pip|test)-requires to *requirements.txt
+* Rename tools/(pip|test)-requires to \*requirements.txt
 * python3: Fix traceback while running tests
 * python3: Fix traceback while running tests
 * python3: More python3 compat updates
@@ -662,13 +949,13 @@ CHANGES
 
 * Allow Multiple sets of deprecated name/group for options
 * Add CLI vs config file priority test
-* Add test cases for default_config_files
+* Add test cases for default\_config\_files
 * Move --config-dir tests into their own test case
 * Remove some redundant code for bool opt actions
 * Normalizes non lowercase option group names in conf files
 * Switch to flake8/hacking instead of pep8+pyflakes
 * Made a couple minor textual documentation / typo fixes
-* Re-work test_cli to use testscenarios
+* Re-work test\_cli to use testscenarios
 * Upgrade testing to use testr
 * Update build to use pbr
 * Add python3 compatability support
@@ -677,7 +964,7 @@ CHANGES
 * Remove debug print statements from tests
 * Python 3.x compatibility
 * Support for Dictionary Options
-* set_defaults does not work for more than one kwarg
+* set\_defaults does not work for more than one kwarg
 * Adds pylint section in tox.ini in oslo.config to check for unused imports
 * Removes unused imports in the oslo.config.tests module
 * Improve test cases for boolean values
@@ -697,12 +984,12 @@ CHANGES
 
 * Change the name of the project to oslo.config
 * Switch to semantic versioning
-* Explicitly set ConfigOpts._args to sys.argv[1:]
+* Explicitly set ConfigOpts.\_args to sys.argv[1:]
 
 2013.1b5
 --------
 
-* Add deprecated_group Opt kwarg
+* Add deprecated\_group Opt kwarg
 * Add AUTHORS and ChangeLog to .gitignore
 * Add missing files to the tarball
 
@@ -717,7 +1004,7 @@ CHANGES
 
 * Fix setup.py to install the correct package
 * Allow MultiConfigParser get from mutliple sections
-* Refactor _cparser_get_with_deprecated()
+* Refactor \_cparser\_get\_with\_deprecated()
 
 2013.1b2
 --------
@@ -727,7 +1014,7 @@ CHANGES
 2013.1b1
 --------
 
-* Implements import_group
+* Implements import\_group
 * Fixes "is not", "not in" syntax usage
 * Add sphinx documentation
 * Fix version to 2013.1
@@ -747,7 +1034,7 @@ CHANGES
 * Add deprecated --logfile common opt
 * Allow nova and others to override some logging defaults
 * Fixing the trim for ListOp when reading from config file
-* Fix set_default() with boolean CLI options
+* Fix set\_default() with boolean CLI options
 * Improve cfg's argparse sub-parsers support
 * Fix regression with cfg CLI arguments
 * Fix ListOpt to trim whitespace
@@ -755,23 +1042,23 @@ CHANGES
 * Hide the GroupAttr conf and group attributes
 * Fix broken --help with CommonConfigOpts
 * updating sphinx documentation
-* Don't reference argparse._StoreAction
+* Don't reference argparse.\_StoreAction
 * Fix minor coding style issue
 * Remove ConfigCliParser class
 * Add support for positional arguments
 * Use stock argparse behaviour for optional args
 * Use stock argparse --usage behaviour
 * Use stock argparse --version behaviour
-* Remove add_option() method
-* Completely remove cfg's disable_interspersed_args()
+* Remove add\_option() method
+* Completely remove cfg's disable\_interspersed\_args()
 * argparse support for cfg
 * Add a missing comma in a docstring
 * cfg: fix required if option has a dash
 * cfg: clean up None value handling
-* Allow set_default and set_override to use None
+* Allow set\_default and set\_override to use None
 * Tilde expansion for --config-file and --config-dir
-* Add import_opt() method to ConfigOpts
-* Modifies _is_opt_registered fcn to check for duplicate opts
+* Add import\_opt() method to ConfigOpts
+* Modifies \_is\_opt\_registered fcn to check for duplicate opts
 * cfg: allow empty config values
 * cfg: Fix typo in documentation
 * Update common code to support pep 1.3. bug 1014216
@@ -782,14 +1069,14 @@ CHANGES
 * Fix pep8 errors
 * cfg: add a global CONF object
 * cfg: add generators for iterating over all options
-* cfg: move constructor args to __call__() args
+* cfg: move constructor args to \_\_call\_\_() args
 * Run pep8 on tests
 * Alphabetize imports in openstack/common/cfg.py
 * cfg: make reset() clear defaults and overrides
 * cfg: automatically create option groups
 * cfg: allow options to be marked as required
 * cfg: use a list comprehension instead of map()
-* New ConfigOpts.find_file() for locating conf files
+* New ConfigOpts.find\_file() for locating conf files
 * Support for directory source of config files
 * Provide file extension when when looking for files
 * Some refactoring of the cfg cache
@@ -800,7 +1087,7 @@ CHANGES
 * Avoid leaking secrets into config logging
 * Fix bug 954488
 * fix restructuredtext formatting in docstrings
-* Add ConfigOpts.print_help()
+* Add ConfigOpts.print\_help()
 * cfg: fix a small comment typo
 * cfg: unneeded multiple inheritance
 * PEP8 cleanup (openstack-common)
@@ -813,6 +1100,6 @@ CHANGES
 * Add cfg test case for recursive substitution
 * Add support to cfg for disabling interspersed args
 * Get cfg test cases to 100%
-* Add cfg test case for exceptions' __str__ methods
+* Add cfg test case for exceptions' \_\_str\_\_ methods
 * Fix some cfg test case naming conflicts
 * Add new cfg module
