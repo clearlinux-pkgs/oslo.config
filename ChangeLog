@@ -1,6 +1,17 @@
 CHANGES
 =======
 
+6.5.1
+-----
+
+* Replace assertRaisesRegexp with assertRaisesRegex
+* add lib-forward-testing-python3 test job
+* add python 3.6 unit test job
+* import zuul job settings from project-config
+* sphinxext: Stop emitting lines multiple times
+* Update reno for stable/rocky
+* Write sphinxext debug tempfile with linebreaks
+
 6.4.0
 -----
 
