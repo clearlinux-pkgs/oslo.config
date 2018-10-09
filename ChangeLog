@@ -1,21 +1,34 @@
 CHANGES
 =======
 
+6.6.0
+-----
+
+* Always build universal wheels
+* python3: Ensure ConfigOpts \_\_iter\_\_ uses list(d.keys())
+* Add release note and documentation for config validator
+* Add support for machine-readable files to validator
+* Simple config validator
+
 6.5.1
 -----
 
 * Replace assertRaisesRegexp with assertRaisesRegex
+* sphinxext: Handle multi-line group descriptions
+* sphinxext: Print output to logs, not to file
 * add lib-forward-testing-python3 test job
 * add python 3.6 unit test job
 * import zuul job settings from project-config
 * sphinxext: Stop emitting lines multiple times
 * Update reno for stable/rocky
 * Write sphinxext debug tempfile with linebreaks
+* move some documentation out of the source files
 
 6.4.0
 -----
 
 * New cache layer for external sources
+* generator: Pass conf to \_OptFormatter
 * ensure we do not modify private data from drivers
 * User guide documentation for backend drivers for oslo.config
 * add detail to driver options in config generator
