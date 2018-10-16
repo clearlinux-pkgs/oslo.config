@@ -1,9 +1,16 @@
 CHANGES
 =======
 
+6.6.1
+-----
+
+* Close a previously opened file in config generator
+* avoid trailing space in sphinxext log output
+
 6.6.0
 -----
 
+* Unit tests to illustrate positional argument bug
 * Always build universal wheels
 * python3: Ensure ConfigOpts \_\_iter\_\_ uses list(d.keys())
 * Add release note and documentation for config validator

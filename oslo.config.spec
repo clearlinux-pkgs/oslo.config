@@ -5,18 +5,18 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : oslo.config
-Version  : 6.6.0
-Release  : 52
-URL      : http://tarballs.openstack.org/oslo.config/oslo.config-6.6.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-6.6.0.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.config/oslo.config-6.6.0.tar.gz.asc
+Version  : 6.6.1
+Release  : 53
+URL      : http://tarballs.openstack.org/oslo.config/oslo.config-6.6.1.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-6.6.1.tar.gz
+Source99 : http://tarballs.openstack.org/oslo.config/oslo.config-6.6.1.tar.gz.asc
 Summary  : Oslo Configuration API
 Group    : Development/Tools
 License  : Apache-2.0
-Requires: oslo.config-bin
-Requires: oslo.config-python3
-Requires: oslo.config-license
-Requires: oslo.config-python
+Requires: oslo.config-bin = %{version}-%{release}
+Requires: oslo.config-license = %{version}-%{release}
+Requires: oslo.config-python = %{version}-%{release}
+Requires: oslo.config-python3 = %{version}-%{release}
 Requires: PyYAML
 Requires: Sphinx
 Requires: debtcollector
@@ -75,7 +75,7 @@ python3 components for the oslo.config package.
 
 
 %prep
-%setup -q -n oslo.config-6.6.0
+%setup -q -n oslo.config-6.6.1
 %patch1 -p1
 
 %build
@@ -83,13 +83,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1539116117
+export SOURCE_DATE_EPOCH=1539731735
 python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/oslo.config
-cp LICENSE %{buildroot}/usr/share/doc/oslo.config/LICENSE
+mkdir -p %{buildroot}/usr/share/package-licenses/oslo.config
+cp LICENSE %{buildroot}/usr/share/package-licenses/oslo.config/LICENSE
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -105,7 +105,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/doc/oslo.config/LICENSE
+/usr/share/package-licenses/oslo.config/LICENSE
 
 %files python
 %defattr(-,root,root,-)
