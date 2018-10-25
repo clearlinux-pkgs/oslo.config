@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+6.6.2
+-----
+
+* Update sphinx extension logging
+* Clean up .gitignore references to personal tools
+
 6.6.1
 -----
 
