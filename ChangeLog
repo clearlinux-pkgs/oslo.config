@@ -1,6 +1,12 @@
 CHANGES
 =======
 
+6.7.0
+-----
+
+* Clean up grammar and spelling in driver docs
+* Add support for looking in environment for config
+
 6.6.2
 -----
 
@@ -19,6 +25,7 @@ CHANGES
 * Unit tests to illustrate positional argument bug
 * Always build universal wheels
 * python3: Ensure ConfigOpts \_\_iter\_\_ uses list(d.keys())
+* Document when sample\_default is in use
 * Add release note and documentation for config validator
 * Add support for machine-readable files to validator
 * Simple config validator
