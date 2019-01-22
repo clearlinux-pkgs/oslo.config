@@ -1,6 +1,18 @@
 CHANGES
 =======
 
+6.8.0
+-----
+
+* Migrating oslo.config to use stestr
+* fix formatting of sample defaults
+* Resolve deprecation warning for rfc3986 uri validation
+* Use template for lower-constraints
+* Fix get\_location for opts in groups
+* Update mailinglist from dev to discuss
+* Revert "Optimizing the safety of the http link site in faq.rst."
+* Optimizing the safety of the http link site in faq.rst
+
 6.7.0
 -----
 
