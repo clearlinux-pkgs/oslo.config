@@ -6,7 +6,7 @@
 #
 Name     : oslo.config
 Version  : 6.8.0
-Release  : 58
+Release  : 59
 URL      : http://tarballs.openstack.org/oslo.config/oslo.config-6.8.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-6.8.0.tar.gz
 Source99 : http://tarballs.openstack.org/oslo.config/oslo.config-6.8.0.tar.gz.asc
@@ -18,15 +18,10 @@ Requires: oslo.config-license = %{version}-%{release}
 Requires: oslo.config-python = %{version}-%{release}
 Requires: oslo.config-python3 = %{version}-%{release}
 Requires: PyYAML
-Requires: Sphinx
 Requires: debtcollector
-Requires: doc8
 Requires: enum34
-Requires: fixtures
 Requires: netaddr
-Requires: openstackdocstheme
 Requires: oslo.i18n
-Requires: reno
 Requires: requests
 Requires: rfc3986
 Requires: six
@@ -86,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1548115421
+export SOURCE_DATE_EPOCH=1551028935
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
