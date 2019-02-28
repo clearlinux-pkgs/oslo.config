@@ -1,11 +1,19 @@
 CHANGES
 =======
 
+6.8.1
+-----
+
+* add python 3.7 unit test job
+* [Configuration] Clean up .gitignore files
+
 6.8.0
 -----
 
+* Cleaning testrepository occurrences
 * Migrating oslo.config to use stestr
 * fix formatting of sample defaults
+* Update hacking version
 * Resolve deprecation warning for rfc3986 uri validation
 * Use template for lower-constraints
 * Fix get\_location for opts in groups
