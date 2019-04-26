@@ -1,6 +1,18 @@
 CHANGES
 =======
 
+6.9.0
+-----
+
+* OpenDev Migration Patch
+* Dropping the py35 testing
+* tox: Suppress output
+* Clarify help on config-file and config-dir options
+* Handle collections.abc deprecations
+* Update master for stable/stein
+* Add note to docs about CLI opts and config files
+* tox: Whitelist 'find'
+
 6.8.1
 -----
 

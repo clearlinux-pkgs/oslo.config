@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x1A541148054E9E38 (infra-root@openstack.org)
 #
 Name     : oslo.config
-Version  : 6.8.1
-Release  : 61
-URL      : http://tarballs.openstack.org/oslo.config/oslo.config-6.8.1.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-6.8.1.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.config/oslo.config-6.8.1.tar.gz.asc
+Version  : 6.9.0
+Release  : 62
+URL      : http://tarballs.openstack.org/oslo.config/oslo.config-6.9.0.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-6.9.0.tar.gz
+Source99 : http://tarballs.openstack.org/oslo.config/oslo.config-6.9.0.tar.gz.asc
 Summary  : Oslo Configuration API
 Group    : Development/Tools
 License  : Apache-2.0
@@ -73,7 +73,7 @@ python3 components for the oslo.config package.
 
 
 %prep
-%setup -q -n oslo.config-6.8.1
+%setup -q -n oslo.config-6.9.0
 %patch1 -p1
 
 %build
@@ -81,11 +81,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1551395835
+export SOURCE_DATE_EPOCH=1556300139
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install
+export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslo.config
 cp LICENSE %{buildroot}/usr/share/package-licenses/oslo.config/LICENSE
