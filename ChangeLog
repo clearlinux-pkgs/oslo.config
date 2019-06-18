@@ -1,6 +1,17 @@
 CHANGES
 =======
 
+6.10.0
+------
+
+* Fix coverage tox venv
+* Cap Bandit below 1.6.0 and update Sphinx requirement
+* Add a Quick Start tutorial
+* Revert "Replace git.openstack.org URLs with opendev.org URLs"
+* Document precedence of config sources
+* Replace git.openstack.org URLs with opendev.org URLs
+* Move user docs to top of index
+
 6.9.0
 -----
 
@@ -9,6 +20,7 @@ CHANGES
 * tox: Suppress output
 * Clarify help on config-file and config-dir options
 * Handle collections.abc deprecations
+* Add exclude-groups option to config validator
 * Update master for stable/stein
 * Add note to docs about CLI opts and config files
 * tox: Whitelist 'find'

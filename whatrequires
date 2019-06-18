@@ -1,4 +1,24 @@
 # This file contains recursive sources that require this package
+barbican
+castellan
+cinder
+glance
+glance_store
 horizon
+ironic
+ironic-lib
+keystonemiddleware
+neutron
+neutron-lib
+nova
+os-ken
+os-win
+os_vif
+oslo.cache
+oslo.log
+oslo.messaging
 oslo.privsep
+oslo.service
 oslo.upgradecheck
+osprofiler
+tempest
