@@ -1,10 +1,19 @@
 CHANGES
 =======
 
+6.11.0
+------
+
+* Remove '.testr.conf'
+* Switch to sphinxcontrib-apidoc
+* Deprecate ConfigFilter
+* Add unit tests for validator
+
 6.10.0
 ------
 
 * Fix coverage tox venv
+* Add special handling for keystone\_authtoken group
 * Cap Bandit below 1.6.0 and update Sphinx requirement
 * Add a Quick Start tutorial
 * Revert "Replace git.openstack.org URLs with opendev.org URLs"

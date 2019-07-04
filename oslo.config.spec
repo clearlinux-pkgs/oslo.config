@@ -5,11 +5,11 @@
 # Source0 file verified with key 0xFC43F0EE211DFED8 (infra-root@openstack.org)
 #
 Name     : oslo.config
-Version  : 6.10.0
-Release  : 63
-URL      : http://tarballs.openstack.org/oslo.config/oslo.config-6.10.0.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-6.10.0.tar.gz
-Source99 : http://tarballs.openstack.org/oslo.config/oslo.config-6.10.0.tar.gz.asc
+Version  : 6.11.0
+Release  : 64
+URL      : http://tarballs.openstack.org/oslo.config/oslo.config-6.11.0.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-6.11.0.tar.gz
+Source99 : http://tarballs.openstack.org/oslo.config/oslo.config-6.11.0.tar.gz.asc
 Summary  : Oslo Configuration API
 Group    : Development/Tools
 License  : Apache-2.0
@@ -82,15 +82,15 @@ python3 components for the oslo.config package.
 
 
 %prep
-%setup -q -n oslo.config-6.10.0
+%setup -q -n oslo.config-6.11.0
 %patch1 -p1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1560866693
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1562243739
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
