@@ -7,6 +7,7 @@ glance_store
 horizon
 ironic
 ironic-lib
+keystone
 keystonemiddleware
 neutron
 neutron-lib
@@ -17,8 +18,13 @@ os_vif
 oslo.cache
 oslo.log
 oslo.messaging
+oslo.middleware
+oslo.policy
 oslo.privsep
 oslo.service
 oslo.upgradecheck
 osprofiler
+python-keystoneclient
+python-manilaclient
+sahara
 tempest

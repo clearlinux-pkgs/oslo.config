@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+6.11.1
+------
+
+* Improve removing quotes logic
+* Bump the openstackdocstheme extension to 1.20
+* Blacklist sphinx 2.1.0 (autodoc bug)
+* Clean up the unnecessary sphinx from test-requirements.txt
+* Add Python 3 Train unit tests
+
 6.11.0
 ------
 
