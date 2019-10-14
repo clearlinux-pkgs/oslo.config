@@ -6,7 +6,7 @@
 #
 Name     : oslo.config
 Version  : 6.11.1
-Release  : 66
+Release  : 67
 URL      : http://tarballs.openstack.org/oslo.config/oslo.config-6.11.1.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-6.11.1.tar.gz
 Source1 : http://tarballs.openstack.org/oslo.config/oslo.config-6.11.1.tar.gz.asc
@@ -19,7 +19,6 @@ Requires: oslo.config-python = %{version}-%{release}
 Requires: oslo.config-python3 = %{version}-%{release}
 Requires: PyYAML
 Requires: debtcollector
-Requires: enum34
 Requires: netaddr
 Requires: oslo.i18n
 Requires: requests
@@ -29,7 +28,6 @@ Requires: stevedore
 BuildRequires : PyYAML
 BuildRequires : buildreq-distutils3
 BuildRequires : debtcollector
-BuildRequires : enum34
 BuildRequires : netaddr
 BuildRequires : oslo.i18n
 BuildRequires : pbr
@@ -40,11 +38,8 @@ BuildRequires : stevedore
 Patch1: 0001-stateless.patch
 
 %description
-========================
 Team and repository tags
-========================
-.. image:: https://governance.openstack.org/tc/badges/oslo.config.svg
-:target: https://governance.openstack.org/tc/reference/tags/index.html
+        ========================
 
 %package bin
 Summary: bin components for the oslo.config package.
@@ -90,8 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1567183089
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1571082527
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -107,7 +101,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslo.config
-cp LICENSE %{buildroot}/usr/share/package-licenses/oslo.config/LICENSE
+cp %{_builddir}/oslo.config-6.11.1/LICENSE %{buildroot}/usr/share/package-licenses/oslo.config/b9a131284bb03c49a33f0ade435e87c1bff4394b
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -123,7 +117,7 @@ echo ----[ mark ]----
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/oslo.config/LICENSE
+/usr/share/package-licenses/oslo.config/b9a131284bb03c49a33f0ade435e87c1bff4394b
 
 %files python
 %defattr(-,root,root,-)

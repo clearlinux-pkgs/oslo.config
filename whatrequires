@@ -16,6 +16,7 @@ os-ken
 os-win
 os_vif
 oslo.cache
+oslo.concurrency
 oslo.log
 oslo.messaging
 oslo.middleware
@@ -23,6 +24,7 @@ oslo.policy
 oslo.privsep
 oslo.service
 oslo.upgradecheck
+oslo.versionedobjects
 osprofiler
 python-keystoneclient
 python-manilaclient
