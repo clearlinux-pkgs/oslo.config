@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+6.12.0
+------
+
+* Stop configuring install\_command in tox
+* fix: fix float opt min and max value format errror
+* tox: Keeping going with docs
+* Update the constraints url
+* Update master for stable/train
+
 6.11.1
 ------
 
