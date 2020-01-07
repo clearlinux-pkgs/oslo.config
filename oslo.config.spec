@@ -6,7 +6,7 @@
 #
 Name     : oslo.config
 Version  : 7.0.0
-Release  : 70
+Release  : 71
 URL      : http://tarballs.openstack.org/oslo.config/oslo.config-7.0.0.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-7.0.0.tar.gz
 Source1  : http://tarballs.openstack.org/oslo.config/oslo.config-7.0.0.tar.gz.asc
