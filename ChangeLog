@@ -1,6 +1,15 @@
 CHANGES
 =======
 
+8.0.1
+-----
+
+* Update the minversion parameter
+* trivial: Cleanup tox.ini
+* remove outdated header
+* Remove universal wheel configuration
+* reword releasenote for py27 support dropping
+
 8.0.0
 -----
 
