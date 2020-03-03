@@ -6,7 +6,7 @@
 #
 Name     : oslo.config
 Version  : 8.0.1
-Release  : 73
+Release  : 74
 URL      : http://tarballs.openstack.org/oslo.config/oslo.config-8.0.1.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-8.0.1.tar.gz
 Source1  : http://tarballs.openstack.org/oslo.config/oslo.config-8.0.1.tar.gz.asc
@@ -41,8 +41,32 @@ Patch1: 0001-stateless.patch
 ========================
 Team and repository tags
 ========================
+
 .. image:: https://governance.openstack.org/tc/badges/oslo.config.svg
-:target: https://governance.openstack.org/tc/reference/tags/index.html
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
+
+.. Change things from this point on
+
+==========================
+Oslo Configuration Library
+==========================
+
+.. image:: https://img.shields.io/pypi/v/oslo.config.svg
+    :target: https://pypi.org/project/oslo.config/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/dm/oslo.config.svg
+    :target: https://pypi.org/project/oslo.config/
+    :alt: Downloads
+
+The Oslo configuration API supports parsing command line arguments and
+.ini style configuration files.
+
+* License: Apache License, Version 2.0
+* Documentation: https://docs.openstack.org/oslo.config/latest/
+* Source: https://opendev.org/openstack/oslo.config/
+* Bugs: https://bugs.launchpad.net/oslo.config
+* Release notes:  https://docs.openstack.org/releasenotes/oslo.config/
 
 %package bin
 Summary: bin components for the oslo.config package.
@@ -74,6 +98,7 @@ python components for the oslo.config package.
 Summary: python3 components for the oslo.config package.
 Group: Default
 Requires: python3-core
+Provides: pypi(oslo.config)
 
 %description python3
 python3 components for the oslo.config package.
@@ -89,7 +114,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582741182
+export SOURCE_DATE_EPOCH=1583193949
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar

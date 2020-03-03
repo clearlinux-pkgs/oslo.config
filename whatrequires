@@ -4,6 +4,7 @@ castellan
 cinder
 glance
 glance_store
+heat
 horizon
 ironic
 ironic-lib
@@ -29,4 +30,6 @@ osprofiler
 python-keystoneclient
 python-manilaclient
 sahara
+subunit2sql
+swift
 tempest
