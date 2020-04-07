@@ -1,10 +1,17 @@
 CHANGES
 =======
 
+8.0.2
+-----
+
+
 8.0.1
 -----
 
 * Update the minversion parameter
+* mypy: Add boilerplate configuration
+* Switch to hacking 2.x
+* Remove six
 * trivial: Cleanup tox.ini
 * remove outdated header
 * Remove universal wheel configuration
@@ -19,6 +26,7 @@ CHANGES
 7.0.0
 -----
 
+* Use stevedore to list the source drivers in documentation
 * Remove ConfigFilter
 * Ensure option groups don't change during logging
 

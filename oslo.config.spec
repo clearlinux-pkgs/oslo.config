@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x4F398DEAE440091C (infra-root@openstack.org)
 #
 Name     : oslo.config
-Version  : 8.0.1
-Release  : 74
-URL      : http://tarballs.openstack.org/oslo.config/oslo.config-8.0.1.tar.gz
-Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-8.0.1.tar.gz
-Source1  : http://tarballs.openstack.org/oslo.config/oslo.config-8.0.1.tar.gz.asc
+Version  : 8.0.2
+Release  : 75
+URL      : http://tarballs.openstack.org/oslo.config/oslo.config-8.0.2.tar.gz
+Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-8.0.2.tar.gz
+Source1  : http://tarballs.openstack.org/oslo.config/oslo.config-8.0.2.tar.gz.asc
 Summary  : Oslo Configuration API
 Group    : Development/Tools
 License  : Apache-2.0
@@ -23,7 +23,6 @@ Requires: netaddr
 Requires: oslo.i18n
 Requires: requests
 Requires: rfc3986
-Requires: six
 Requires: stevedore
 BuildRequires : PyYAML
 BuildRequires : buildreq-distutils3
@@ -33,7 +32,6 @@ BuildRequires : oslo.i18n
 BuildRequires : pbr
 BuildRequires : requests
 BuildRequires : rfc3986
-BuildRequires : six
 BuildRequires : stevedore
 Patch1: 0001-stateless.patch
 
@@ -41,32 +39,8 @@ Patch1: 0001-stateless.patch
 ========================
 Team and repository tags
 ========================
-
 .. image:: https://governance.openstack.org/tc/badges/oslo.config.svg
-    :target: https://governance.openstack.org/tc/reference/tags/index.html
-
-.. Change things from this point on
-
-==========================
-Oslo Configuration Library
-==========================
-
-.. image:: https://img.shields.io/pypi/v/oslo.config.svg
-    :target: https://pypi.org/project/oslo.config/
-    :alt: Latest Version
-
-.. image:: https://img.shields.io/pypi/dm/oslo.config.svg
-    :target: https://pypi.org/project/oslo.config/
-    :alt: Downloads
-
-The Oslo configuration API supports parsing command line arguments and
-.ini style configuration files.
-
-* License: Apache License, Version 2.0
-* Documentation: https://docs.openstack.org/oslo.config/latest/
-* Source: https://opendev.org/openstack/oslo.config/
-* Bugs: https://bugs.launchpad.net/oslo.config
-* Release notes:  https://docs.openstack.org/releasenotes/oslo.config/
+:target: https://governance.openstack.org/tc/reference/tags/index.html
 
 %package bin
 Summary: bin components for the oslo.config package.
@@ -99,14 +73,21 @@ Summary: python3 components for the oslo.config package.
 Group: Default
 Requires: python3-core
 Provides: pypi(oslo.config)
+Requires: pypi(requests)
+Requires: pypi(oslo.i18n)
+Requires: pypi(netaddr)
+Requires: pypi(debtcollector)
+Requires: pypi(pyyaml)
+Requires: pypi(stevedore)
+Requires: pypi(rfc3986)
 
 %description python3
 python3 components for the oslo.config package.
 
 
 %prep
-%setup -q -n oslo.config-8.0.1
-cd %{_builddir}/oslo.config-8.0.1
+%setup -q -n oslo.config-8.0.2
+cd %{_builddir}/oslo.config-8.0.2
 %patch1 -p1
 
 %build
@@ -114,7 +95,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583193949
+export SOURCE_DATE_EPOCH=1586272703
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -131,7 +112,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/oslo.config
-cp %{_builddir}/oslo.config-8.0.1/LICENSE %{buildroot}/usr/share/package-licenses/oslo.config/b9a131284bb03c49a33f0ade435e87c1bff4394b
+cp %{_builddir}/oslo.config-8.0.2/LICENSE %{buildroot}/usr/share/package-licenses/oslo.config/b9a131284bb03c49a33f0ade435e87c1bff4394b
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :

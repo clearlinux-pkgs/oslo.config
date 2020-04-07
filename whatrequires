@@ -1,23 +1,20 @@
 # This file contains recursive sources that require this package
-barbican
 castellan
 cinder
-glance
 glance_store
 heat
-horizon
 ironic
 ironic-lib
 keystone
 keystonemiddleware
 neutron
 neutron-lib
-nova
 os-ken
 os-win
 os_vif
 oslo.cache
 oslo.concurrency
+oslo.db
 oslo.log
 oslo.messaging
 oslo.middleware
@@ -27,9 +24,10 @@ oslo.service
 oslo.upgradecheck
 oslo.versionedobjects
 osprofiler
+pycadf
 python-keystoneclient
 python-manilaclient
-sahara
+ryu
 subunit2sql
 swift
 tempest
