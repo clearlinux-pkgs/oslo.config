@@ -2,7 +2,6 @@
 castellan
 cinder
 glance_store
-heat
 ironic
 ironic-lib
 keystone

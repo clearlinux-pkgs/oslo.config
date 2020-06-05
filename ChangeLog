@@ -1,6 +1,23 @@
 CHANGES
 =======
 
+8.1.0
+-----
+
+* Add py38 package metadata
+* Raise hacking minimum to 3.0.1
+* Remove the unused coding style modules
+* Cap flake8 to be < 3.8.0
+* Remove six from lower-constraints.txt
+* docs: Mention other ways of escaping '$'
+* Resolve UnboundLocalError
+* Add release notes links to doc index
+* Mark sphinx extensions thread safe
+* Add Python3 victoria unit tests
+* Update master for stable/ussuri
+* Remove redundant class docstring info
+* Use unittest.mock instead of third party mock
+
 8.0.2
 -----
 
