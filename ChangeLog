@@ -1,6 +1,13 @@
 CHANGES
 =======
 
+8.2.0
+-----
+
+* Update lower-constraints versions
+* Fix pygments style
+* generator: Handle 'cfg.Opt'-type options
+
 8.1.0
 -----
 
