@@ -1,6 +1,11 @@
 CHANGES
 =======
 
+8.3.0
+-----
+
+* drop use of pkg\_resources
+
 8.2.0
 -----
 
@@ -15,6 +20,7 @@ CHANGES
 * Raise hacking minimum to 3.0.1
 * Remove the unused coding style modules
 * Cap flake8 to be < 3.8.0
+* Align contributing doc with oslo's policy
 * Remove six from lower-constraints.txt
 * docs: Mention other ways of escaping '$'
 * Resolve UnboundLocalError
