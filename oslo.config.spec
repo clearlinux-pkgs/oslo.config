@@ -6,7 +6,7 @@
 #
 Name     : oslo.config
 Version  : 8.3.2
-Release  : 80
+Release  : 81
 URL      : http://tarballs.openstack.org/oslo.config/oslo.config-8.3.2.tar.gz
 Source0  : http://tarballs.openstack.org/oslo.config/oslo.config-8.3.2.tar.gz
 Source1  : http://tarballs.openstack.org/oslo.config/oslo.config-8.3.2.tar.gz.asc
